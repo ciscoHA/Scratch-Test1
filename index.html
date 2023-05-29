@@ -9,14 +9,14 @@
   <title>Flight Simulator 3D v3.1</title>
   <style>
     body {
-      color: #ffffff;
+      color: #000000;
       font-family: sans-serif;
       overflow: hidden;
       margin: 0;
       padding: 0;
     }
     :root, body.is-fullscreen {
-      background-color: #000000;
+      background-color: #ffffff;
     }
     [hidden] {
       display: none !important;
@@ -46,7 +46,7 @@
       cursor: default;
       user-select: none;
       -webkit-user-select: none;
-      background-color: #000000;
+      background-color: #ffffff;
     }
     #launch {
       background-color: rgba(0, 0, 0, 0.7);
@@ -132,17 +132,17 @@
       cursor: auto;
     }
     .sc-monitor-root[opcode^="data_"] .sc-monitor-value-color {
-      background-color: #ff8c1a;
+      background-color: #1a9cff;
     }
     .sc-monitor-row-value-outer {
-      background-color: #fc662c;
+      background-color: #2bb7ff;
     }
     .sc-monitor-row-value-editing .sc-monitor-row-value-outer {
-      background-color: #e25b27;
+      background-color: #26a4e5;
     }
     
   </style>
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#ffffff">
   
 </head>
 <body>
@@ -298,7 +298,7 @@
           }
         });
         const otherControlsExist = true;
-        const fillColor = otherControlsExist ? '#575E75' : '#ffffff';
+        const fillColor = otherControlsExist ? '#575E75' : '#000000';
         const updateFullScreen = () => {
           isFullScreen = !!(document.fullscreenElement || document.webkitFullscreenElement);
           document.body.classList.toggle('is-fullscreen', isFullScreen);
@@ -338,7 +338,7 @@
       });
 
       if (typeof ScaffoldingAddons !== 'undefined') {
-        ScaffoldingAddons.run(scaffolding, {"gamepad":false,"pointerlock":false,"specialCloudBehaviors":false,"unsafeCloudBehaviors":false,"pause":true});
+        ScaffoldingAddons.run(scaffolding, {"gamepad":true,"pointerlock":false,"specialCloudBehaviors":false,"unsafeCloudBehaviors":false,"pause":true});
       }
 
       scaffolding.setExtensionSecurityManager({
